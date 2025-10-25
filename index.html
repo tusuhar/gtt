@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Tareas Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="header-info">
+        <h1>📝 Gestor de Tareas Pro</h1>
+        <p id="date-time"></p>
+      </div>
+      <button id="theme-toggle" class="theme-btn">🌙</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <h3>Total</h3>
+        <p id="total-count">0</p>
+      </div>
+      <div class="stat">
+        <h3>Hechas</h3>
+        <p id="done-count">0</p>
+      </div>
+      <div class="stat">
+        <h3>Pendientes</h3>
+        <p id="pending-count">0</p>
+      </div>
+      <div class="circle-progress">
+        <svg viewBox="0 0 36 36">
+          <path class="bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0-31.831" />
+          <path id="progress" class="progress" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0-31.831" />
+        </svg>
+      </div>
+    </section>
+
+    <div class="task-input">
+      <input type="text" id="task-input" placeholder="Escribe una tarea importante..." />
+      <button id="add-btn">Agregar</button>
+    </div>
+
+    <div class="filters">
+      <button data-filter="all" class="filter active">Todas</button>
+      <button data-filter="pending" class="filter">Pendientes</button>
+      <button data-filter="completed" class="filter">Completadas</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <footer>
+      <p>© 2025 — Hecho con 💙 y JavaScript</p>
+    </footer>
+
+    <!-- 🔊 Sonidos -->
+    <audio id="sound-add" src="sonidos/click.mp3" preload="auto"></audio>
+    <audio id="sound-done" src="sonidos/done.mp3" preload="auto"></audio>
+    <audio id="sound-delete" src="sonidos/delete.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
